@@ -1,27 +1,32 @@
-unit=1
-level=1
+#import pygame,time, sys, socket #Use on Alex's machine
+
+import time,sys,socket #Use on Michael's machine
+
 
 # initializing the constructor
 def reset(estop):
-    rest = [Unit1 [N], Unit2[N], Unit3[N]]
+    rest = ["Unit1",["N"], "Unit2",["N"], "Unit3",["N"]]
     f = open("All call", "w")
     f.write(str(rest))
     f.close()
     num = 0
     while estop == True:
         f = open("All call", "r")
-        setting = eval(f.readline())
+        setting = str(eval(f.readline()))
         f.close()
-        if "N" not in setting:
+        if "N" is not in setting:
             f = open("All call", "w")
             f.write(str("return"))
             f.close()
         else:
             num = num + 1
             print(num)
+            time.sleep(1)
+
+
 def construction(number, task):
-    print(unit)
-    print (level)
+    print("unit")
+    print ("level")
     print (task)
     if task == "trigger":
         show_outputter(number,task)

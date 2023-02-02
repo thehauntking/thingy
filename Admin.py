@@ -1,3 +1,6 @@
+# import pygame,time, sys, socket #Use on Alex's machine
+
+import time, sys, socket  # Use on Michael's machine
 import pygame,time, sys, socket
 #input detector
 unit=1

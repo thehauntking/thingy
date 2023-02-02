@@ -1,4 +1,7 @@
-import pygame,time, sys, socket
+#import pygame,time, sys, socket #Use on Alex's machine
+
+import time,sys,socket #Use on Michael's machine
+
 #input detector
 
 
@@ -31,8 +34,8 @@ if personal=="y":
     while True:
         from tkinter import *
         master = Tk()
-        button = Button(master, text='E_stop', command=E_stop())
-        button2 = Button(master, text='reset', command=reset())
+        button = Button(master, text='E_stop', command = E_stop())
+        button2 = Button(master, text='reset', command = reset())
         button.pack()
         button2.pack()
         mainloop()
