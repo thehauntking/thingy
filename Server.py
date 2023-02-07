@@ -1,7 +1,7 @@
 #import pygame,time, sys, socket #Use on Alex's machine
 
 import time,sys,socket #Use on Michael's machine
-
+import tkinter as tk
 
 # initializing the constructor
 def reset(estop):
@@ -14,7 +14,7 @@ def reset(estop):
         f = open("All call", "r")
         setting = str(eval(f.readline()))
         f.close()
-        if "N" is not in setting:
+        if setting.__contains__("N"):
             f = open("All call", "w")
             f.write(str("return"))
             f.close()
@@ -44,21 +44,22 @@ def show_outputter(number,task):
     f = open("Command", "w")
     f.write(str("midi" + str(number)))
     f.close()
-print("connected")
-personal = input("Ready to start?")
-if personal=="y":
-    while True:
-        f = open("info", "r")
-        command=eval(f.readline())
-        print(command)
-        f.close()
-        input()
-        number=command[0]
-        task=command[2]
-        construction(number, task)
+def main():
+    print("connected")
+    personal = input("Ready to start?")
+    if personal=="y":
+        while True:
+            f = open("info", "r")
+            command=eval(f.readline())
+            print(command)
+            f.close()
+            input()
+            number=command[0]
+            task=command[2]
+            construction(number, task)
 
-else:
-    print("ERROR")
+    else:
+        print("ERROR")
 
 
 #outputter
